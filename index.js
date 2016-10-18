@@ -16,7 +16,7 @@ server.get('/', function(request,response){
 
 server.get('/forecast/:latitude,:longitude', function(request, response){
   // response.send("Latitude: " + request.params.latitude + " Longitude: " + request.params.longitude);
-  var url ='https://api.darksky.net/forecast/'+ apikey +'/'+ request.params.latitude +',-122.4233';//url from darksky
+  var url ='https://api.darksky.net/forecast/'+ apikey +'/'+ request.params.latitude +','+ request.params.longitude;//url from darksky
   var timeoutConfig ={
   timeout: 2000
 };
