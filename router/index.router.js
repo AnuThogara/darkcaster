@@ -4,6 +4,6 @@ var router = express.Router();
 var path = require('path');
 
 router.get('/', function(request,response){
-  response.sendFile('../public/html/index.htm',{root: path.resolve('./')}); //index.router.js
+  response.sendFile('public/html/index.html',{root: path.resolve('./')}); //index.router.js
  });
-module.exports =router;
+module.exports = router;
