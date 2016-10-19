@@ -3,8 +3,6 @@ var server = express();
 var logger = require('./middleware/logger.js');
 var cors = require('cors');
 var authorize = require('./middleware/auth.js');
-var indexRouter = require('./router/index.router.js');
-
 
 var forecastRouter = require('./router/forecast.router.js');
 var indexRouter = require('./router/index.router.js');
