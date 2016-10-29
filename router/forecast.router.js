@@ -10,7 +10,7 @@ router.use(authorize);
 router.get('/forecast/:latitude,:longitude', function(request, response) {
     var url = buildForecastURL(request.params.latitude, request.params.longitude);
 
-    axios.get(url, timeoutConfig) //get to the url
+    axios.get(url, timeoutConfig) //get to the url get and catch
 
     .then(function(forecast) {
             response.send(forecast.data);

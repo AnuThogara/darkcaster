@@ -8,7 +8,7 @@ var forecastRouter = require('./router/forecast.router.js');
 var indexRouter = require('./router/index.router.js');
 var port = process.env.PORT || 8080;
 //middleware
-server.use(express.static(__dirname+'./public'));
+server.use(express.static(__dirname+'/public'));
 server.use(logger);
 server.use(cors());
 
