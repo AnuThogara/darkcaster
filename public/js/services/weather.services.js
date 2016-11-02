@@ -9,8 +9,7 @@
             var secretToken = {
                 secret: "Its a secret"
             };
-            var latitude;
-            var longitude;
+
             var service = {};
             service.weatherData = [];
             service.getWeather = getWeather;
@@ -18,14 +17,15 @@
 
             function getWeather(latitude, longitude) {
                 //get weather from proxy
-                latitude = latitude;
-                longitude = longitude;
+                service.lat = latitude;
+                service.lon = longitude;
                 var config = {
                     headers: secretToken
                 };
                 var url = '/forecast/' + latitude + ',' + longitude;
                 return $http.get(url, config)
                     .then(function(response) {
+                  
                             service.weatherData = response.data;
                     });
 
